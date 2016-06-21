@@ -149,14 +149,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="Redeal"/>
                                 <connections>
-                                    <action selector="onRedeal:" destination="dOA-tQ-cGe" eventType="touchUpInside" id="7gb-gq-TV6"/>
+                                    <action selector="onRedeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SwR-K3-g5h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUP-Ru-pUD">
+                                <rect key="frame" x="20" y="475" width="406" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.28500426400000001" green="1" blue="0.3366978081" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Matchismo" id="uIL-fv-4X3"/>
                     <connections>
+                        <outlet property="matchUnmatchLabel" destination="FUP-Ru-pUD" id="VEp-20-Fy7"/>
                         <outlet property="scoreLabel" destination="6R4-jS-cYN" id="7wb-85-o56"/>
                         <outletCollection property="cardButtons" destination="YRy-Bb-A9V" id="iUe-PY-dCt"/>
                         <outletCollection property="cardButtons" destination="vpZ-AH-yn3" id="FKJ-7A-QdQ"/>
@@ -207,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cF3-tE-Sym">
-                                <rect key="frame" x="12" y="20" width="560" height="628"/>
+                                <rect key="frame" x="12" y="20" width="560" height="678"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6nH-am-Hbv">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
@@ -821,8 +828,19 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abm-dX-hdr">
-                                        <rect key="frame" x="0.0" y="558" width="560" height="70"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4L5-89-bUQ">
+                                        <rect key="frame" x="0.0" y="558" width="560" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-so-Wc9">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abm-dX-hdr">
+                                        <rect key="frame" x="0.0" y="608" width="560" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UH-gt-U45">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="70"/>
@@ -853,6 +871,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Set" id="PTV-mw-GkV"/>
                     <connections>
+                        <outlet property="matchUnmatchLabel" destination="dpy-so-Wc9" id="zq8-f4-xmL"/>
                         <outlet property="scoreLabel" destination="0UH-gt-U45" id="jaP-K0-mbM"/>
                         <outletCollection property="cardButtons" destination="jJv-Z6-tFi" id="v7E-Hj-dVa"/>
                         <outletCollection property="cardButtons" destination="1ST-Nw-lFo" id="QaR-KZ-haL"/>

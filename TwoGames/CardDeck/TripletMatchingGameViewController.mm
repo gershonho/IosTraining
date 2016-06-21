@@ -34,7 +34,7 @@ static NSString *kSymbolTwo     = @"●";
 static NSString *kSymbolThree   = @"■";
 static NSString *kSymbolUnknown = @"?";
 
-+(NSString *)symbolToShow:(TripletCardAttributeValue)symbol {
+-(NSString *)symbolToShow:(TripletCardAttributeValue)symbol {
   switch (symbol) {
     case TripletCardAttributeValueOne:
       return kSymbolOne;
@@ -52,7 +52,7 @@ static const NSUInteger kTwo     = 2;
 static const NSUInteger kThree   = 3;
 static const NSUInteger kUnknown = 5;
 
-+(NSUInteger)numberOfSymbols:(TripletCardAttributeValue)number {
+-(NSUInteger)numberOfSymbols:(TripletCardAttributeValue)number {
   switch (number) {
     case TripletCardAttributeValueOne:
       return kOne;
@@ -65,7 +65,7 @@ static const NSUInteger kUnknown = 5;
   }
 }
 
-+(UIColor *)borderColor:(TripletCardAttributeValue)color {
+-(UIColor *)borderColor:(TripletCardAttributeValue)color {
   switch (color) {
     case TripletCardAttributeValueOne:
       return [UIColor redColor];
@@ -78,7 +78,7 @@ static const NSUInteger kUnknown = 5;
   }
 }
 
-+(UIColor *)dashedPatternColor:(TripletCardAttributeValue)color {
+-(UIColor *)dashedPatternColor:(TripletCardAttributeValue)color {
   NSString* patternImageName;
   switch (color) {
     case TripletCardAttributeValueOne:
@@ -96,7 +96,7 @@ static const NSUInteger kUnknown = 5;
   return [UIColor colorWithPatternImage:[UIImage imageNamed:patternImageName]];
 }
 
-+(UIColor *)fillColor:(TripletCardAttributeValue)color shading:(TripletCardAttributeValue)shading {
+-(UIColor *)fillColor:(TripletCardAttributeValue)color shading:(TripletCardAttributeValue)shading {
   switch (shading) {
     case TripletCardAttributeValueOne:
       //Shading is 1 - empty image - fill with white
@@ -115,46 +115,46 @@ static const NSUInteger kUnknown = 5;
   }
 }
 
-+ (NSAttributedString *)buttonAttributedTitleForTripletCard:(TripletCard *)card {
-   //Initiate the button attributed title
-    
-    TripletCardAttributeValue number  = [card number];
-    TripletCardAttributeValue symbol  = [card symbol];
-    TripletCardAttributeValue shading = [card shading];
-    TripletCardAttributeValue color   = [card color];
-    
-    //Select the symbol to show
-    NSString *symbolToShow = [self.class symbolToShow:symbol];
-    
-    //Select how many time we repeat the symbol
-    NSUInteger numberOfSymbols = [self.class numberOfSymbols:number];
-    
-    //Create the button text by proper repetition of the proper symbol
-    NSString *buttonText = [@"" stringByPaddingToLength:numberOfSymbols
-                                             withString:symbolToShow
-                                        startingAtIndex:0];
-    
-    //Select the fill color.
-    //It includes also the pattern (empty, dashed or full)
-    UIColor *fillColor = [self fillColor:color shading:shading];
-    
-    //Select the border color
-    UIColor *borderColor = [self borderColor:color];
-    
-    NSDictionary *buttonAttributes = @{
-                                       NSForegroundColorAttributeName:fillColor,
-                                       NSStrokeColorAttributeName:borderColor,
-                                       NSStrokeWidthAttributeName:@-3};
-    
-    return
-        [[NSAttributedString alloc] initWithString:buttonText attributes:buttonAttributes];
+- (NSAttributedString *)attributedTitleForCard:(Card *)card {
+  TripletCard *tripletCard = (TripletCard *)card;
+  
+  TripletCardAttributeValue number  = [tripletCard number];
+  TripletCardAttributeValue symbol  = [tripletCard symbol];
+  TripletCardAttributeValue shading = [tripletCard shading];
+  TripletCardAttributeValue color   = [tripletCard color];
+  
+  //Select the symbol to show
+  NSString *symbolToShow = [self symbolToShow:symbol];
+  
+  //Select how many time we repeat the symbol
+  NSUInteger numberOfSymbols = [self numberOfSymbols:number];
+  
+  //Create the button text by proper repetition of the proper symbol
+  NSString *buttonText = [@"" stringByPaddingToLength:numberOfSymbols
+                                           withString:symbolToShow
+                                      startingAtIndex:0];
+  
+  //Select the text fill color.
+  //It includes also the pattern (empty, dashed or full)
+  UIColor *fillColor = [self fillColor:color shading:shading];
+  
+  //Select the text border color
+  UIColor *borderColor = [self borderColor:color];
+  
+  NSDictionary *buttonAttributes = @{
+                                     NSForegroundColorAttributeName:fillColor,
+                                     NSStrokeColorAttributeName:borderColor,
+                                     NSStrokeWidthAttributeName:@-3};
+  
+  return
+      [[NSAttributedString alloc] initWithString:buttonText attributes:buttonAttributes];
 }
 
 - (void)updateCardButtonUI:(UIButton *)cardButton card:(Card*)card {
   
   //First we calculate the button's Attributed Title
   NSAttributedString *newAttributedTitle =
-      [self.class buttonAttributedTitleForTripletCard:card];
+      [self attributedTitleForCard:card];
   
   //Now we get the current Attributed Title
   NSAttributedString *currentAttributedTitle =
@@ -188,6 +188,7 @@ static const NSUInteger kUnknown = 5;
   cardButton.enabled = !card.isMatched;
   
 }
+
 
 @end
 

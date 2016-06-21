@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 static const NSUInteger kPointsForMatchingSuit = 1;
-static const NSUInteger kPointsForMatchingRank = 2;
+static const NSUInteger kPointsForMatchingRank = 4;
 
 //Class variables - valid rank strings & suits
 + (NSArray *)rankStrings {
@@ -55,15 +55,19 @@ static const NSUInteger kPointsForMatchingRank = 2;
 }
 
 //Match - the sum of scores with all Other Cards
-- (int)match:(NSArray *)otherCards {
++ (int)match:(NSArray *)cards {
   int score = 0;
+  if (cards.count != 2) {
+    return score;
+  }
   
-  for (PlayingCard *playingCard in otherCards) {
-    if ([playingCard.suit isEqualToString:self.suit]) {
-      score += kPointsForMatchingSuit;
-    } else if (playingCard.rank == self.rank) {
-      score += kPointsForMatchingRank;
-    }
+  PlayingCard* firstCard = cards.firstObject;
+  PlayingCard* lastCard = cards.lastObject;
+  
+  if ([firstCard.suit isEqualToString:lastCard.suit]) {
+    score = kPointsForMatchingSuit;
+  } else if (firstCard.rank == lastCard.rank) {
+    score = kPointsForMatchingRank;
   }
   
   return score;

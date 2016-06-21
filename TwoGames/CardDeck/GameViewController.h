@@ -16,8 +16,14 @@
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) Game *game;
 
-- (void)updateCardButtonUI:(UIButton *)cardButton card:(Card *)card;
 - (NSUInteger)cardCount;
 
+//These methods must be overriden by derived classes
+
+//Update the UI of a card button with the data from the Card object
+- (void)updateCardButtonUI:(UIButton *)cardButton card:(Card *)card;
+
+//Given a card produce its Attributed Title
+- (NSAttributedString *)attributedTitleForCard:(Card *)card;
 @end
 

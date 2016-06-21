@@ -8,14 +8,20 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Game()
 @property(nonatomic, readwrite)NSInteger score;
 @property(nonatomic, strong)NSMutableArray *cards;
-
+@property(nonatomic)NSMutableArray *mutableHistory;
 @end
 
 @implementation Game
 
-static const NSUInteger kMatchingBonus = 4;
-static const NSUInteger kMismatchPenalty = 1;
 static const NSUInteger kCostToChoose = 1;
+
+- (NSInteger) matchingBonus {
+  return 4;
+}
+
+- (NSInteger) mismatchPenalty {
+  return 1;
+}
 
 - (NSMutableArray *)cards {
   if (!_cards) {
@@ -23,6 +29,20 @@ static const NSUInteger kCostToChoose = 1;
   }
   return _cards;
 }
+
+- (NSMutableArray *)mutableHistory {
+  if (!_mutableHistory) {
+    _mutableHistory = [[NSMutableArray alloc] init];
+  }
+  return _mutableHistory;
+}
+
+@synthesize history;
+
+- (NSArray *)history {
+  return self.mutableHistory;
+}
+
 
 - (instancetype)initWithCardCount:(NSUInteger) count
                         usingDeck:(Deck *)deck
@@ -79,15 +99,18 @@ static const NSUInteger kCostToChoose = 1;
       [chosenCards addObject:anyCard];
     }
     
+    //Update the history
+    [self.mutableHistory addObject:[NSArray arrayWithArray:chosenCards]];
+    
     if (chosenCards.count > 1) {
       int matchScore = [card.class match:chosenCards];
       if (matchScore) {
-        self.score += matchScore * kMatchingBonus;
+        self.score += matchScore * self.matchingBonus;
         for (Card *anyCard in chosenCards) {
           anyCard.matched = YES;
         }
       } else {
-        self.score -= kMismatchPenalty;
+        self.score -= self.mismatchPenalty;
         if (chosenCards.count >= self.maxCardsToChoose) {
           for (Card *anyCard in chosenCards) {
             if (anyCard != card) {
@@ -98,7 +121,7 @@ static const NSUInteger kCostToChoose = 1;
       }
     }
   }
-  self.score -= kCostToChoose;
+  //self.score -= kCostToChoose;
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index {
