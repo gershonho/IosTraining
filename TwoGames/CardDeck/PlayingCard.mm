@@ -20,12 +20,6 @@ static const NSUInteger kPointsForMatchingRank = 4;
   return @[@"♠︎", @"♣︎", @"♥︎", @"♦︎"];
 }
 
-//Contents - contcatenates rank string & suit
-- (NSString *)contents {
-  NSArray *rankStrings = [PlayingCard rankStrings];
-  return [rankStrings[self.rank] stringByAppendingString:self.suit];
-}
-
 //Suit setter & getter
 @synthesize suit = _suit;
 

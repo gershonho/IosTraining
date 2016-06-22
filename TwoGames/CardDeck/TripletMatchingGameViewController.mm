@@ -30,8 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 static NSString *kSymbolOne     = @"▲";
-static NSString *kSymbolTwo     = @"●";
-static NSString *kSymbolThree   = @"■";
+static NSString *kSymbolTwo     = @"■";
+static NSString *kSymbolThree   = @"●";
 static NSString *kSymbolUnknown = @"?";
 
 -(NSString *)symbolToShow:(TripletCardAttributeValue)symbol {

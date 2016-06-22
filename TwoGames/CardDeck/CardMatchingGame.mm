@@ -8,6 +8,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation CardMatchingGame
 
+- (NSUInteger) minCardsToChoose {
+  return 2;
+}
+
 - (NSUInteger) maxCardsToChoose {
   return 2;
 }

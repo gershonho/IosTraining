@@ -4,13 +4,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//Abstract class for a card
+
 @interface Card : NSObject
 
-@property (strong, nonatomic) NSString *contents;
 
+//Flag to be set once the card is chosen
 @property (nonatomic, getter=isChosen) BOOL chosen;
+
+//Flag to be set once the card is matched
 @property (nonatomic, getter=isMatched) BOOL matched;
 
+//Match score of a set of card
+// 0 when the cards are not matching
+// >0 when the cards are matching
 + (int)match:(NSArray *)cards;
 
 @end

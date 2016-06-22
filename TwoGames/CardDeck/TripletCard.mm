@@ -59,10 +59,6 @@ typedef NS_ENUM(NSUInteger, TripletCardAttributeName) {
   }
 }
 
-- (NSString *)contents {
-  return nil;
-}
-
 + (int)match:(NSArray *)cards {
   int score = 0;
   

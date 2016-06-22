@@ -13,7 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation Game
 
-static const NSUInteger kCostToChoose = 1;
+//static const NSUInteger kCostToChoose = 1;
+
+
+static const NSUInteger kMatchingBonus = 4;
+static const NSUInteger kMismatchPenalty = 1;
+
 
 - (NSInteger) matchingBonus {
   return 4;
@@ -99,18 +104,19 @@ static const NSUInteger kCostToChoose = 1;
       [chosenCards addObject:anyCard];
     }
     
-    //Update the history
-    [self.mutableHistory addObject:[NSArray arrayWithArray:chosenCards]];
-    
-    if (chosenCards.count > 1) {
+    if (chosenCards.count >= self.minCardsToChoose) {
+      
+      NSInteger scoreDelta = 0;
+
+      //Check if we have a match
       int matchScore = [card.class match:chosenCards];
       if (matchScore) {
-        self.score += matchScore * self.matchingBonus;
+        scoreDelta = matchScore * kMatchingBonus;
         for (Card *anyCard in chosenCards) {
           anyCard.matched = YES;
         }
       } else {
-        self.score -= self.mismatchPenalty;
+        scoreDelta = -kMismatchPenalty;
         if (chosenCards.count >= self.maxCardsToChoose) {
           for (Card *anyCard in chosenCards) {
             if (anyCard != card) {
@@ -119,6 +125,15 @@ static const NSUInteger kCostToChoose = 1;
           }
         }
       }
+      
+      //Update the score
+      self.score += scoreDelta;
+
+      //Create the new history record. It contains the chosen card set and score delta
+      NSArray *historyRecord = @[chosenCards, [NSNumber numberWithLong:scoreDelta]];
+      
+      //Update the history
+      [self.mutableHistory addObject:historyRecord];
     }
   }
   //self.score -= kCostToChoose;

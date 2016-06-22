@@ -7,6 +7,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation TripletMatchingGame
 
+- (NSUInteger) minCardsToChoose {
+  return 3;
+}
+
 - (NSUInteger) maxCardsToChoose {
   return 3;
 }

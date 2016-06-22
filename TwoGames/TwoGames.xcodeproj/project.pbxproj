@@ -21,6 +21,7 @@
 		E4C09D641D12A59000DB8475 /* Card.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D631D12A59000DB8475 /* Card.mm */; };
 		E4C09D671D12BB9400DB8475 /* Deck.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D661D12BB9400DB8475 /* Deck.mm */; };
 		E4C09D6A1D12C89A00DB8475 /* PlayingDeck.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */; };
+		E4D61F531D1998EA00875A0B /* HistoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4D61F521D1998EA00875A0B /* HistoryViewController.mm */; };
 		E4FFDD0D1D18227700783643 /* TripletDeck.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD0C1D18227700783643 /* TripletDeck.mm */; };
 		E4FFDD101D182B8300783643 /* Game.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD0F1D182B8300783643 /* Game.mm */; };
 		E4FFDD141D18328300783643 /* CardMatchingGameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD131D18328300783643 /* CardMatchingGameViewController.mm */; };
@@ -74,6 +75,8 @@
 		E4C09D661D12BB9400DB8475 /* Deck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Deck.mm; sourceTree = "<group>"; };
 		E4C09D681D12C89A00DB8475 /* PlayingDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingDeck.h; sourceTree = "<group>"; };
 		E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingDeck.mm; sourceTree = "<group>"; };
+		E4D61F511D1998EA00875A0B /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		E4D61F521D1998EA00875A0B /* HistoryViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HistoryViewController.mm; sourceTree = "<group>"; };
 		E4FFDD0B1D18227700783643 /* TripletDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletDeck.h; sourceTree = "<group>"; };
 		E4FFDD0C1D18227700783643 /* TripletDeck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletDeck.mm; sourceTree = "<group>"; };
 		E4FFDD0E1D182B8300783643 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -134,14 +137,9 @@
 		E49C34041D1299530066A4A5 /* TwoGames */ = {
 			isa = PBXGroup;
 			children = (
-				E4FFDD111D18323B00783643 /* ViewControllers */,
+				E4D61F571D1A6B3400875A0B /* Application */,
 				E4C09D5E1D12A06900DB8475 /* Model */,
-				E49C34081D1299530066A4A5 /* AppDelegate.h */,
-				E49C34091D1299530066A4A5 /* AppDelegate.mm */,
-				E49C340E1D1299530066A4A5 /* Main.storyboard */,
-				E49C34111D1299530066A4A5 /* Assets.xcassets */,
-				E49C34131D1299530066A4A5 /* LaunchScreen.storyboard */,
-				E49C34161D1299530066A4A5 /* Info.plist */,
+				E4FFDD111D18323B00783643 /* ViewControllers */,
 				E49C34051D1299530066A4A5 /* Supporting Files */,
 			);
 			name = TwoGames;
@@ -179,26 +177,63 @@
 		E4C09D5E1D12A06900DB8475 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4D61F541D1A69FE00875A0B /* Base Classes */,
+				E4D61F551D1A6A4800875A0B /* Card Matching Game */,
+				E4D61F561D1A6AB000875A0B /* Triplet Matching Game */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4D61F541D1A69FE00875A0B /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
 				E4C09D621D12A59000DB8475 /* Card.h */,
 				E4C09D631D12A59000DB8475 /* Card.mm */,
+				E4C09D651D12BB9400DB8475 /* Deck.h */,
+				E4C09D661D12BB9400DB8475 /* Deck.mm */,
+				E4FFDD0E1D182B8300783643 /* Game.h */,
+				E4FFDD0F1D182B8300783643 /* Game.mm */,
+			);
+			name = "Base Classes";
+			sourceTree = "<group>";
+		};
+		E4D61F551D1A6A4800875A0B /* Card Matching Game */ = {
+			isa = PBXGroup;
+			children = (
 				E4C09D5F1D12A10300DB8475 /* PlayingCard.h */,
 				E4C09D601D12A10300DB8475 /* PlayingCard.mm */,
+				E4C09D681D12C89A00DB8475 /* PlayingDeck.h */,
+				E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */,
+				E44C0F221D166C32000AB51A /* CardMatchingGame.h */,
+				E44C0F231D166C32000AB51A /* CardMatchingGame.mm */,
+			);
+			name = "Card Matching Game";
+			sourceTree = "<group>";
+		};
+		E4D61F561D1A6AB000875A0B /* Triplet Matching Game */ = {
+			isa = PBXGroup;
+			children = (
 				E47729A81D17FF36004413FF /* TripletCard.h */,
 				E47729A91D17FF36004413FF /* TripletCard.mm */,
 				E4FFDD0B1D18227700783643 /* TripletDeck.h */,
 				E4FFDD0C1D18227700783643 /* TripletDeck.mm */,
-				E4C09D651D12BB9400DB8475 /* Deck.h */,
-				E4C09D661D12BB9400DB8475 /* Deck.mm */,
-				E4C09D681D12C89A00DB8475 /* PlayingDeck.h */,
-				E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */,
-				E4FFDD0E1D182B8300783643 /* Game.h */,
-				E4FFDD0F1D182B8300783643 /* Game.mm */,
-				E44C0F221D166C32000AB51A /* CardMatchingGame.h */,
-				E44C0F231D166C32000AB51A /* CardMatchingGame.mm */,
 				E4FFDD181D18397300783643 /* TripletMatchingGame.h */,
 				E4FFDD191D18397300783643 /* TripletMatchingGame.mm */,
 			);
-			name = Model;
+			name = "Triplet Matching Game";
+			sourceTree = "<group>";
+		};
+		E4D61F571D1A6B3400875A0B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E49C34081D1299530066A4A5 /* AppDelegate.h */,
+				E49C34091D1299530066A4A5 /* AppDelegate.mm */,
+				E49C340E1D1299530066A4A5 /* Main.storyboard */,
+				E49C34111D1299530066A4A5 /* Assets.xcassets */,
+				E49C34131D1299530066A4A5 /* LaunchScreen.storyboard */,
+				E49C34161D1299530066A4A5 /* Info.plist */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		E4FFDD111D18323B00783643 /* ViewControllers */ = {
@@ -210,6 +245,8 @@
 				E4FFDD131D18328300783643 /* CardMatchingGameViewController.mm */,
 				E4FFDD151D18390800783643 /* TripletMatchingGameViewController.h */,
 				E4FFDD161D18390800783643 /* TripletMatchingGameViewController.mm */,
+				E4D61F511D1998EA00875A0B /* HistoryViewController.h */,
+				E4D61F521D1998EA00875A0B /* HistoryViewController.mm */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +392,7 @@
 				E4FFDD171D18390800783643 /* TripletMatchingGameViewController.mm in Sources */,
 				E4FFDD1A1D18397300783643 /* TripletMatchingGame.mm in Sources */,
 				E4C09D641D12A59000DB8475 /* Card.mm in Sources */,
+				E4D61F531D1998EA00875A0B /* HistoryViewController.mm in Sources */,
 				E49C34071D1299530066A4A5 /* main.m in Sources */,
 				E4FFDD101D182B8300783643 /* Game.mm in Sources */,
 				E4FFDD0D1D18227700783643 /* TripletDeck.mm in Sources */,
