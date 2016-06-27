@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E44C0F241D166C32000AB51A /* CardMatchingGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = E44C0F231D166C32000AB51A /* CardMatchingGame.mm */; };
+		E47729AA1D17FF36004413FF /* TripletCard.mm in Sources */ = {isa = PBXBuildFile; fileRef = E47729A91D17FF36004413FF /* TripletCard.mm */; };
+		E49C34071D1299530066A4A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C34061D1299530066A4A5 /* main.m */; };
+		E49C340A1D1299530066A4A5 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E49C34091D1299530066A4A5 /* AppDelegate.mm */; };
+		E49C340D1D1299530066A4A5 /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E49C340C1D1299530066A4A5 /* GameViewController.mm */; };
+		E49C34101D1299530066A4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C340E1D1299530066A4A5 /* Main.storyboard */; };
+		E49C34121D1299530066A4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49C34111D1299530066A4A5 /* Assets.xcassets */; };
+		E49C34151D1299530066A4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C34131D1299530066A4A5 /* LaunchScreen.storyboard */; };
+		E49C34201D1299530066A4A5 /* CardDeckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C341F1D1299530066A4A5 /* CardDeckTests.m */; };
+		E49C342B1D1299530066A4A5 /* CardDeckUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C342A1D1299530066A4A5 /* CardDeckUITests.m */; };
+		E4C09D611D12A10300DB8475 /* PlayingCard.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D601D12A10300DB8475 /* PlayingCard.mm */; };
+		E4C09D641D12A59000DB8475 /* Card.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D631D12A59000DB8475 /* Card.mm */; };
+		E4C09D671D12BB9400DB8475 /* Deck.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D661D12BB9400DB8475 /* Deck.mm */; };
+		E4C09D6A1D12C89A00DB8475 /* PlayingDeck.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */; };
+		E4C118641D1C027800C08B9F /* Grid.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C118631D1C027800C08B9F /* Grid.mm */; };
+		E4C118681D1C068100C08B9F /* PlayingCardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C118671D1C068100C08B9F /* PlayingCardView.mm */; };
+		E4C1186B1D1FBD5700C08B9F /* CardViewBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C1186A1D1FBD5700C08B9F /* CardViewBuilder.mm */; };
+		E4C1186E1D1FBDD300C08B9F /* CardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C1186D1D1FBDD300C08B9F /* CardView.mm */; };
+		E4C118711D1FBEAE00C08B9F /* PlayingCardViewBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C118701D1FBEAE00C08B9F /* PlayingCardViewBuilder.mm */; };
+		E4C118761D1FF42200C08B9F /* TripletCardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C118751D1FF42200C08B9F /* TripletCardView.mm */; };
+		E4C1187A1D1FF6DA00C08B9F /* TripletCardViewBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4C118791D1FF6DA00C08B9F /* TripletCardViewBuilder.mm */; };
+		E4FFDD0D1D18227700783643 /* TripletDeck.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD0C1D18227700783643 /* TripletDeck.mm */; };
+		E4FFDD101D182B8300783643 /* Game.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD0F1D182B8300783643 /* Game.mm */; };
+		E4FFDD141D18328300783643 /* CardMatchingGameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD131D18328300783643 /* CardMatchingGameViewController.mm */; };
+		E4FFDD171D18390800783643 /* TripletMatchingGameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD161D18390800783643 /* TripletMatchingGameViewController.mm */; };
+		E4FFDD1A1D18397300783643 /* TripletMatchingGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4FFDD191D18397300783643 /* TripletMatchingGame.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E49C341C1D1299530066A4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49C33FA1D1299530066A4A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49C34011D1299530066A4A5;
+			remoteInfo = CardDeck;
+		};
+		E49C34271D1299530066A4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49C33FA1D1299530066A4A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49C34011D1299530066A4A5;
+			remoteInfo = CardDeck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E44C0F221D166C32000AB51A /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		E44C0F231D166C32000AB51A /* CardMatchingGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CardMatchingGame.mm; sourceTree = "<group>"; };
+		E47729A81D17FF36004413FF /* TripletCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletCard.h; sourceTree = "<group>"; };
+		E47729A91D17FF36004413FF /* TripletCard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletCard.mm; sourceTree = "<group>"; };
+		E49C34021D1299530066A4A5 /* CustomViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49C34061D1299530066A4A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E49C34081D1299530066A4A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E49C34091D1299530066A4A5 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		E49C340B1D1299530066A4A5 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		E49C340C1D1299530066A4A5 /* GameViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
+		E49C340F1D1299530066A4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E49C34111D1299530066A4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E49C34141D1299530066A4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E49C34161D1299530066A4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49C341B1D1299530066A4A5 /* CustomViews.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViews.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49C341F1D1299530066A4A5 /* CardDeckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardDeckTests.m; sourceTree = "<group>"; };
+		E49C34211D1299530066A4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49C34261D1299530066A4A5 /* CustomViews.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViews.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49C342A1D1299530066A4A5 /* CardDeckUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardDeckUITests.m; sourceTree = "<group>"; };
+		E49C342C1D1299530066A4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C09D5F1D12A10300DB8475 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		E4C09D601D12A10300DB8475 /* PlayingCard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingCard.mm; sourceTree = "<group>"; };
+		E4C09D621D12A59000DB8475 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		E4C09D631D12A59000DB8475 /* Card.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Card.mm; sourceTree = "<group>"; };
+		E4C09D651D12BB9400DB8475 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		E4C09D661D12BB9400DB8475 /* Deck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Deck.mm; sourceTree = "<group>"; };
+		E4C09D681D12C89A00DB8475 /* PlayingDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingDeck.h; sourceTree = "<group>"; };
+		E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingDeck.mm; sourceTree = "<group>"; };
+		E4C118621D1C027800C08B9F /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		E4C118631D1C027800C08B9F /* Grid.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Grid.mm; sourceTree = "<group>"; };
+		E4C118661D1C068100C08B9F /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
+		E4C118671D1C068100C08B9F /* PlayingCardView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingCardView.mm; sourceTree = "<group>"; };
+		E4C118691D1FBD5700C08B9F /* CardViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewBuilder.h; sourceTree = "<group>"; };
+		E4C1186A1D1FBD5700C08B9F /* CardViewBuilder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CardViewBuilder.mm; sourceTree = "<group>"; };
+		E4C1186C1D1FBDD300C08B9F /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		E4C1186D1D1FBDD300C08B9F /* CardView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CardView.mm; sourceTree = "<group>"; };
+		E4C1186F1D1FBEAE00C08B9F /* PlayingCardViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardViewBuilder.h; sourceTree = "<group>"; };
+		E4C118701D1FBEAE00C08B9F /* PlayingCardViewBuilder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlayingCardViewBuilder.mm; sourceTree = "<group>"; };
+		E4C118741D1FF42200C08B9F /* TripletCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletCardView.h; sourceTree = "<group>"; };
+		E4C118751D1FF42200C08B9F /* TripletCardView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletCardView.mm; sourceTree = "<group>"; };
+		E4C118771D1FF4C600C08B9F /* TripletCardAttributeValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripletCardAttributeValue.h; sourceTree = "<group>"; };
+		E4C118781D1FF6DA00C08B9F /* TripletCardViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletCardViewBuilder.h; sourceTree = "<group>"; };
+		E4C118791D1FF6DA00C08B9F /* TripletCardViewBuilder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletCardViewBuilder.mm; sourceTree = "<group>"; };
+		E4FFDD0B1D18227700783643 /* TripletDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletDeck.h; sourceTree = "<group>"; };
+		E4FFDD0C1D18227700783643 /* TripletDeck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletDeck.mm; sourceTree = "<group>"; };
+		E4FFDD0E1D182B8300783643 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		E4FFDD0F1D182B8300783643 /* Game.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game.mm; sourceTree = "<group>"; };
+		E4FFDD121D18328300783643 /* CardMatchingGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGameViewController.h; sourceTree = "<group>"; };
+		E4FFDD131D18328300783643 /* CardMatchingGameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CardMatchingGameViewController.mm; sourceTree = "<group>"; };
+		E4FFDD151D18390800783643 /* TripletMatchingGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletMatchingGameViewController.h; sourceTree = "<group>"; };
+		E4FFDD161D18390800783643 /* TripletMatchingGameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletMatchingGameViewController.mm; sourceTree = "<group>"; };
+		E4FFDD181D18397300783643 /* TripletMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripletMatchingGame.h; sourceTree = "<group>"; };
+		E4FFDD191D18397300783643 /* TripletMatchingGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TripletMatchingGame.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E49C33FF1D1299530066A4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49C34181D1299530066A4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49C34231D1299530066A4A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E49C33F91D1299530066A4A5 = {
+			isa = PBXGroup;
+			children = (
+				E49C34041D1299530066A4A5 /* CustomViews */,
+				E49C341E1D1299530066A4A5 /* CustomViewsTests */,
+				E49C34291D1299530066A4A5 /* CustomViewsUITests */,
+				E49C34031D1299530066A4A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E49C34031D1299530066A4A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E49C34021D1299530066A4A5 /* CustomViews.app */,
+				E49C341B1D1299530066A4A5 /* CustomViews.xctest */,
+				E49C34261D1299530066A4A5 /* CustomViews.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E49C34041D1299530066A4A5 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E4D61F571D1A6B3400875A0B /* Application */,
+				E4C09D5E1D12A06900DB8475 /* Model */,
+				E4FFDD111D18323B00783643 /* ViewControllers */,
+				E4C118651D1C047D00C08B9F /* Views */,
+				E49C34051D1299530066A4A5 /* Supporting Files */,
+			);
+			name = CustomViews;
+			path = CardDeck;
+			sourceTree = "<group>";
+		};
+		E49C34051D1299530066A4A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E49C34061D1299530066A4A5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E49C341E1D1299530066A4A5 /* CustomViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E49C341F1D1299530066A4A5 /* CardDeckTests.m */,
+				E49C34211D1299530066A4A5 /* Info.plist */,
+			);
+			name = CustomViewsTests;
+			path = CardDeckTests;
+			sourceTree = "<group>";
+		};
+		E49C34291D1299530066A4A5 /* CustomViewsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E49C342A1D1299530066A4A5 /* CardDeckUITests.m */,
+				E49C342C1D1299530066A4A5 /* Info.plist */,
+			);
+			name = CustomViewsUITests;
+			path = CardDeckUITests;
+			sourceTree = "<group>";
+		};
+		E4C09D5E1D12A06900DB8475 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4C1187D1D21538500C08B9F /* Games */,
+				E4C1187C1D21537200C08B9F /* Decks */,
+				E4C1187B1D21535A00C08B9F /* Cards */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4C118651D1C047D00C08B9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4C1186C1D1FBDD300C08B9F /* CardView.h */,
+				E4C1186D1D1FBDD300C08B9F /* CardView.mm */,
+				E4C118661D1C068100C08B9F /* PlayingCardView.h */,
+				E4C118671D1C068100C08B9F /* PlayingCardView.mm */,
+				E4C118741D1FF42200C08B9F /* TripletCardView.h */,
+				E4C118751D1FF42200C08B9F /* TripletCardView.mm */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E4C118721D1FF25B00C08B9F /* GameViewContrtollers */ = {
+			isa = PBXGroup;
+			children = (
+				E49C340B1D1299530066A4A5 /* GameViewController.h */,
+				E49C340C1D1299530066A4A5 /* GameViewController.mm */,
+				E4FFDD121D18328300783643 /* CardMatchingGameViewController.h */,
+				E4FFDD131D18328300783643 /* CardMatchingGameViewController.mm */,
+				E4FFDD151D18390800783643 /* TripletMatchingGameViewController.h */,
+				E4FFDD161D18390800783643 /* TripletMatchingGameViewController.mm */,
+			);
+			name = GameViewContrtollers;
+			sourceTree = "<group>";
+		};
+		E4C118731D1FF27B00C08B9F /* CardViewBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				E4C118691D1FBD5700C08B9F /* CardViewBuilder.h */,
+				E4C1186A1D1FBD5700C08B9F /* CardViewBuilder.mm */,
+				E4C1186F1D1FBEAE00C08B9F /* PlayingCardViewBuilder.h */,
+				E4C118701D1FBEAE00C08B9F /* PlayingCardViewBuilder.mm */,
+				E4C118781D1FF6DA00C08B9F /* TripletCardViewBuilder.h */,
+				E4C118791D1FF6DA00C08B9F /* TripletCardViewBuilder.mm */,
+			);
+			name = CardViewBuilders;
+			sourceTree = "<group>";
+		};
+		E4C1187B1D21535A00C08B9F /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				E4C09D621D12A59000DB8475 /* Card.h */,
+				E4C09D631D12A59000DB8475 /* Card.mm */,
+				E4C09D5F1D12A10300DB8475 /* PlayingCard.h */,
+				E4C09D601D12A10300DB8475 /* PlayingCard.mm */,
+				E47729A81D17FF36004413FF /* TripletCard.h */,
+				E47729A91D17FF36004413FF /* TripletCard.mm */,
+				E4C118771D1FF4C600C08B9F /* TripletCardAttributeValue.h */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		E4C1187C1D21537200C08B9F /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				E4C09D651D12BB9400DB8475 /* Deck.h */,
+				E4C09D661D12BB9400DB8475 /* Deck.mm */,
+				E4C09D681D12C89A00DB8475 /* PlayingDeck.h */,
+				E4C09D691D12C89A00DB8475 /* PlayingDeck.mm */,
+				E4FFDD0B1D18227700783643 /* TripletDeck.h */,
+				E4FFDD0C1D18227700783643 /* TripletDeck.mm */,
+			);
+			name = Decks;
+			sourceTree = "<group>";
+		};
+		E4C1187D1D21538500C08B9F /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				E4FFDD0E1D182B8300783643 /* Game.h */,
+				E4FFDD0F1D182B8300783643 /* Game.mm */,
+				E44C0F221D166C32000AB51A /* CardMatchingGame.h */,
+				E44C0F231D166C32000AB51A /* CardMatchingGame.mm */,
+				E4FFDD181D18397300783643 /* TripletMatchingGame.h */,
+				E4FFDD191D18397300783643 /* TripletMatchingGame.mm */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		E4D61F571D1A6B3400875A0B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E49C34081D1299530066A4A5 /* AppDelegate.h */,
+				E49C34091D1299530066A4A5 /* AppDelegate.mm */,
+				E49C340E1D1299530066A4A5 /* Main.storyboard */,
+				E49C34111D1299530066A4A5 /* Assets.xcassets */,
+				E49C34131D1299530066A4A5 /* LaunchScreen.storyboard */,
+				E49C34161D1299530066A4A5 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		E4FFDD111D18323B00783643 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4C118731D1FF27B00C08B9F /* CardViewBuilders */,
+				E4C118721D1FF25B00C08B9F /* GameViewContrtollers */,
+				E4C118621D1C027800C08B9F /* Grid.h */,
+				E4C118631D1C027800C08B9F /* Grid.mm */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E49C34011D1299530066A4A5 /* CustomViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49C342F1D1299530066A4A5 /* Build configuration list for PBXNativeTarget "CustomViews" */;
+			buildPhases = (
+				E49C33FE1D1299530066A4A5 /* Sources */,
+				E49C33FF1D1299530066A4A5 /* Frameworks */,
+				E49C34001D1299530066A4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomViews;
+			productName = CardDeck;
+			productReference = E49C34021D1299530066A4A5 /* CustomViews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E49C341A1D1299530066A4A5 /* CustomViewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49C34321D1299530066A4A5 /* Build configuration list for PBXNativeTarget "CustomViewsTests" */;
+			buildPhases = (
+				E49C34171D1299530066A4A5 /* Sources */,
+				E49C34181D1299530066A4A5 /* Frameworks */,
+				E49C34191D1299530066A4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49C341D1D1299530066A4A5 /* PBXTargetDependency */,
+			);
+			name = CustomViewsTests;
+			productName = CardDeckTests;
+			productReference = E49C341B1D1299530066A4A5 /* CustomViews.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E49C34251D1299530066A4A5 /* CustomViewsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49C34351D1299530066A4A5 /* Build configuration list for PBXNativeTarget "CustomViewsUITests" */;
+			buildPhases = (
+				E49C34221D1299530066A4A5 /* Sources */,
+				E49C34231D1299530066A4A5 /* Frameworks */,
+				E49C34241D1299530066A4A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49C34281D1299530066A4A5 /* PBXTargetDependency */,
+			);
+			name = CustomViewsUITests;
+			productName = CardDeckUITests;
+			productReference = E49C34261D1299530066A4A5 /* CustomViews.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E49C33FA1D1299530066A4A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Lightricks;
+				TargetAttributes = {
+					E49C34011D1299530066A4A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					E49C341A1D1299530066A4A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E49C34011D1299530066A4A5;
+					};
+					E49C34251D1299530066A4A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E49C34011D1299530066A4A5;
+					};
+				};
+			};
+			buildConfigurationList = E49C33FD1D1299530066A4A5 /* Build configuration list for PBXProject "CustomViews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E49C33F91D1299530066A4A5;
+			productRefGroup = E49C34031D1299530066A4A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E49C34011D1299530066A4A5 /* CustomViews */,
+				E49C341A1D1299530066A4A5 /* CustomViewsTests */,
+				E49C34251D1299530066A4A5 /* CustomViewsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E49C34001D1299530066A4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49C34151D1299530066A4A5 /* LaunchScreen.storyboard in Resources */,
+				E49C34121D1299530066A4A5 /* Assets.xcassets in Resources */,
+				E49C34101D1299530066A4A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49C34191D1299530066A4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49C34241D1299530066A4A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E49C33FE1D1299530066A4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C09D671D12BB9400DB8475 /* Deck.mm in Sources */,
+				E4C09D611D12A10300DB8475 /* PlayingCard.mm in Sources */,
+				E44C0F241D166C32000AB51A /* CardMatchingGame.mm in Sources */,
+				E4C118711D1FBEAE00C08B9F /* PlayingCardViewBuilder.mm in Sources */,
+				E4C1187A1D1FF6DA00C08B9F /* TripletCardViewBuilder.mm in Sources */,
+				E4C09D6A1D12C89A00DB8475 /* PlayingDeck.mm in Sources */,
+				E47729AA1D17FF36004413FF /* TripletCard.mm in Sources */,
+				E4C118681D1C068100C08B9F /* PlayingCardView.mm in Sources */,
+				E4C1186E1D1FBDD300C08B9F /* CardView.mm in Sources */,
+				E4FFDD141D18328300783643 /* CardMatchingGameViewController.mm in Sources */,
+				E4C1186B1D1FBD5700C08B9F /* CardViewBuilder.mm in Sources */,
+				E49C340D1D1299530066A4A5 /* GameViewController.mm in Sources */,
+				E49C340A1D1299530066A4A5 /* AppDelegate.mm in Sources */,
+				E4FFDD171D18390800783643 /* TripletMatchingGameViewController.mm in Sources */,
+				E4FFDD1A1D18397300783643 /* TripletMatchingGame.mm in Sources */,
+				E4C118641D1C027800C08B9F /* Grid.mm in Sources */,
+				E4C118761D1FF42200C08B9F /* TripletCardView.mm in Sources */,
+				E4C09D641D12A59000DB8475 /* Card.mm in Sources */,
+				E49C34071D1299530066A4A5 /* main.m in Sources */,
+				E4FFDD101D182B8300783643 /* Game.mm in Sources */,
+				E4FFDD0D1D18227700783643 /* TripletDeck.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49C34171D1299530066A4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49C34201D1299530066A4A5 /* CardDeckTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49C34221D1299530066A4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49C342B1D1299530066A4A5 /* CardDeckUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E49C341D1D1299530066A4A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49C34011D1299530066A4A5 /* CustomViews */;
+			targetProxy = E49C341C1D1299530066A4A5 /* PBXContainerItemProxy */;
+		};
+		E49C34281D1299530066A4A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49C34011D1299530066A4A5 /* CustomViews */;
+			targetProxy = E49C34271D1299530066A4A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E49C340E1D1299530066A4A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49C340F1D1299530066A4A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E49C34131D1299530066A4A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49C34141D1299530066A4A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E49C342D1D1299530066A4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E49C342E1D1299530066A4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E49C34301D1299530066A4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardDeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exercise.MatchTwoCards;
+				PRODUCT_NAME = CustomViews;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E49C34311D1299530066A4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CardDeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exercise.MatchTwoCards;
+				PRODUCT_NAME = CustomViews;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E49C34331D1299530066A4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CardDeckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exercise.CardDeckTests;
+				PRODUCT_NAME = CustomViews;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomViews.app/CustomViews";
+			};
+			name = Debug;
+		};
+		E49C34341D1299530066A4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CardDeckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exercise.CardDeckTests;
+				PRODUCT_NAME = CustomViews;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomViews.app/CustomViews";
+			};
+			name = Release;
+		};
+		E49C34361D1299530066A4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CardDeckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exercise.CardDeckUITests;
+				PRODUCT_NAME = CustomViews;
+				TEST_TARGET_NAME = CardDeck;
+			};
+			name = Debug;
+		};
+		E49C34371D1299530066A4A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CardDeckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exercise.CardDeckUITests;
+				PRODUCT_NAME = CustomViews;
+				TEST_TARGET_NAME = CardDeck;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E49C33FD1D1299530066A4A5 /* Build configuration list for PBXProject "CustomViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49C342D1D1299530066A4A5 /* Debug */,
+				E49C342E1D1299530066A4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49C342F1D1299530066A4A5 /* Build configuration list for PBXNativeTarget "CustomViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49C34301D1299530066A4A5 /* Debug */,
+				E49C34311D1299530066A4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49C34321D1299530066A4A5 /* Build configuration list for PBXNativeTarget "CustomViewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49C34331D1299530066A4A5 /* Debug */,
+				E49C34341D1299530066A4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49C34351D1299530066A4A5 /* Build configuration list for PBXNativeTarget "CustomViewsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49C34361D1299530066A4A5 /* Debug */,
+				E49C34371D1299530066A4A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E49C33FA1D1299530066A4A5 /* Project object */;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PlayingCard match:]:PlayingCard.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "playingCard.suit">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GameViewController updateUI]:GameViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cardsContainerView.bounds.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PlayingCardView drawRect:]:PlayingCardView.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "rect.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[GameViewController updateGrid]:GameViewController.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[GameViewController dealMore:]:GameViewController.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[TripletMatchingGameViewController game]:TripletMatchingGameViewController.mm">
+      </ContextState>
+      <ContextState
+         contextName = "__42-[GameViewController animateCardsArrival:]_block_invoke:GameViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[cardView center]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PlayingCardView drawRect:]:PlayingCardView.m">
+      </ContextState>
+      <ContextState
+         contextName = "__48-[GameViewController removeMatchedCardsIfNeeded]_block_invoke:GameViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cardsContainerView.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

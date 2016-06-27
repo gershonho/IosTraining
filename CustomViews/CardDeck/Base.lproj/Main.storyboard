@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CkW-DO-fD6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Matchismo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Matchismo" id="BYZ-38-t0r" customClass="CardMatchingGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6R4-jS-cYN">
+                                <rect key="frame" x="20" y="514" width="89" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3J-p8-phL">
+                                <rect key="frame" x="20" y="20" width="560" height="481"/>
+                                <color key="backgroundColor" red="0.28500426400000001" green="1" blue="0.3366978081" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="n8f-fk-oEs" appends="YES" id="q4e-z0-iHp"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phZ-Ps-hzL">
+                                <rect key="frame" x="503" y="514" width="77" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Redeal"/>
+                                <connections>
+                                    <action selector="onRedeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SwR-K3-g5h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="m3J-p8-phL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2h3-2V-KfX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6R4-jS-cYN" secondAttribute="bottom" id="8Je-s9-UrF"/>
+                            <constraint firstItem="m3J-p8-phL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NRW-Ek-qaY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="phZ-Ps-hzL" secondAttribute="bottom" id="VGP-vB-Dtr"/>
+                            <constraint firstItem="phZ-Ps-hzL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ca7-Nu-VSl"/>
+                            <constraint firstItem="m3J-p8-phL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fWM-7E-mhx"/>
+                            <constraint firstItem="6R4-jS-cYN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ksV-RL-Gpr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m3J-p8-phL" secondAttribute="bottom" constant="50" id="n76-Ha-7Ge"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Matchismo" id="IQk-0g-oyq"/>
+                    <navigationItem key="navigationItem" id="1aj-iL-m5a"/>
+                    <connections>
+                        <outlet property="cardsContainerView" destination="m3J-p8-phL" id="ZJ6-Gg-IAp"/>
+                        <outlet property="scoreLabel" destination="6R4-jS-cYN" id="7wb-85-o56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="n8f-fk-oEs">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="DxY-dF-v0j"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="395" y="438"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PZr-ag-1cf">
+            <objects>
+                <tabBarController id="CkW-DO-fD6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="q6L-VO-shB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dOA-tQ-cGe" kind="relationship" relationship="viewControllers" id="aSO-Az-Gsb"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ORd-GR-moS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhL-yv-aK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="682"/>
+        </scene>
+        <!--Set-->
+        <scene sceneID="HJT-Lv-RH3">
+            <objects>
+                <viewController title="Set" id="dOA-tQ-cGe" customClass="TripletMatchingGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iru-E9-DBW"/>
+                        <viewControllerLayoutGuide type="bottom" id="QeX-WL-axT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xXG-hB-N4u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UH-gt-U45">
+                                <rect key="frame" x="20" y="502" width="83" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGm-A3-AWC">
+                                <rect key="frame" x="503" y="502" width="77" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Redeal"/>
+                                <connections>
+                                    <action selector="onRedeal:" destination="dOA-tQ-cGe" eventType="touchUpInside" id="f1J-Ir-uPo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3VG-Uu-xLh">
+                                <rect key="frame" x="20" y="20" width="560" height="486"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qYF-sq-bej" appends="YES" id="U3g-Qo-7B8"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-NM-kHI">
+                                <rect key="frame" x="241" y="513" width="118" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Deal More"/>
+                                <connections>
+                                    <action selector="dealMore:" destination="dOA-tQ-cGe" eventType="touchUpInside" id="ALR-P3-ZYp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QeX-WL-axT" firstAttribute="top" secondItem="L1V-NM-kHI" secondAttribute="bottom" id="76u-Er-Pap"/>
+                            <constraint firstItem="3VG-Uu-xLh" firstAttribute="top" secondItem="Iru-E9-DBW" secondAttribute="bottom" id="Bdj-ev-nlG"/>
+                            <constraint firstItem="0UH-gt-U45" firstAttribute="leading" secondItem="xXG-hB-N4u" secondAttribute="leadingMargin" id="NfD-mZ-2OU"/>
+                            <constraint firstItem="L1V-NM-kHI" firstAttribute="centerX" secondItem="xXG-hB-N4u" secondAttribute="centerX" id="QLI-lh-wSx"/>
+                            <constraint firstItem="QeX-WL-axT" firstAttribute="top" secondItem="0UH-gt-U45" secondAttribute="bottom" id="Rwu-4U-Eyz"/>
+                            <constraint firstItem="3VG-Uu-xLh" firstAttribute="trailing" secondItem="xXG-hB-N4u" secondAttribute="trailingMargin" id="SWY-b7-Yg8"/>
+                            <constraint firstItem="QeX-WL-axT" firstAttribute="top" secondItem="3VG-Uu-xLh" secondAttribute="bottom" constant="50" id="Tw0-kS-leP"/>
+                            <constraint firstItem="3VG-Uu-xLh" firstAttribute="leading" secondItem="xXG-hB-N4u" secondAttribute="leadingMargin" id="gn5-7c-ayT"/>
+                            <constraint firstItem="QeX-WL-axT" firstAttribute="top" secondItem="kGm-A3-AWC" secondAttribute="bottom" id="tWb-ip-WtQ"/>
+                            <constraint firstItem="kGm-A3-AWC" firstAttribute="trailing" secondItem="xXG-hB-N4u" secondAttribute="trailingMargin" id="ylo-cX-CZl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Set" id="w1f-6s-oOK"/>
+                    <navigationItem key="navigationItem" id="mPt-PL-oUM"/>
+                    <connections>
+                        <outlet property="cardsContainerView" destination="3VG-Uu-xLh" id="qOp-oh-6Qy"/>
+                        <outlet property="scoreLabel" destination="0UH-gt-U45" id="jaP-K0-mbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3OM-iY-f48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qYF-sq-bej">
+                    <connections>
+                        <action selector="tap:" destination="dOA-tQ-cGe" id="eYL-VC-FS2"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="395" y="1197"/>
+        </scene>
+    </scenes>
+</document>
